@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>o.O</title>
+    <style>
+        body {
+            font-family: Monaco, "Lucida Console", monospace;
+            font-size: 13pt;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+    </style>
+</head>
+<body>
+    <div>&gt;<span id="cursor">_</span></div>
+    <script>
+        var on = true;
+        var cursor = document.getElementById("cursor");
+        setInterval(function(){
+            on = !on;
+            cursor.style.visibility = on ? "visible" : "hidden";
+        }, 800);
+    </script>
+</body>
+</html>
