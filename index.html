@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable = no">
     <title>o.O</title>
     <style>
         html { -webkit-text-size-adjust: 100%; }
@@ -13,10 +13,11 @@
             background-color: rgba(0, 0, 0, 0.9);
             overflow: hidden;
         }
+        .line { display: inline-block; }
     </style>
 </head>
 <body>
-    <div>&gt;<span id="cursor">_</span></div>
+    <div class="line">&gt;<span id="cursor">_</span></div>
     <script>
         var on = true;
         var cursor = document.getElementById("cursor");
@@ -24,6 +25,9 @@
             on = !on;
             cursor.style.visibility = on ? "visible" : "hidden";
         }, 800);
+        document.ontouchstart = function(e){
+            e.preventDefault();
+        };
     </script>
 </body>
 </html>
